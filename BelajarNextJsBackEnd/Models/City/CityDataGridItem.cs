@@ -1,4 +1,4 @@
-﻿namespace BelajarNextJsBackEnd.Models
+﻿namespace BelajarNextJsBackEnd.Models.City
 {
     public class CityDataGridItem
     {

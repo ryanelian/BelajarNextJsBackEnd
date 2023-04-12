@@ -1,6 +1,6 @@
 ﻿using BelajarNextJsBackEnd.Entities;
 
-namespace BelajarNextJsBackEnd.Models
+namespace BelajarNextJsBackEnd.Models.City
 {
     public class CityCreateModel
     {
