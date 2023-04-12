@@ -1,6 +1,6 @@
 ﻿namespace BelajarNextJsBackEnd.Models
 {
-    public class ProvinceCreateModel
+    public class ProvinceUpdateModel
     {
         public string Name { set; get; } = "";
     }

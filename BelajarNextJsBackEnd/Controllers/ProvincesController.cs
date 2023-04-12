@@ -23,13 +23,24 @@ namespace BelajarNextJsBackEnd.Controllers
 
         // GET: api/Provinces
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Province>>> GetProvinces()
+        public async Task<ActionResult<List<Province>>> GetProvinces(string? search)
         {
             if (_context.Provinces == null)
             {
                 return NotFound();
             }
-            return await _context.Provinces.ToListAsync();
+
+            var query = _context.Provinces.AsNoTracking();
+
+            if (string.IsNullOrEmpty(search))
+            {
+                return await query.ToListAsync();
+            }
+
+            return await query
+                .Where(Q => Q.Name.ToLower().Contains(search.ToLower()))      // <-- don't do this at real project
+                // LIKE %search%
+                .ToListAsync();
         }
 
         // GET: api/Provinces/5
