@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BelajarNextJsBackEnd.Entities;
-using BelajarNextJsBackEnd.Models;
+using BelajarNextJsBackEnd.Models.Province;
 
 namespace BelajarNextJsBackEnd.Controllers
 {

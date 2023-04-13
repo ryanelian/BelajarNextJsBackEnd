@@ -1,4 +1,4 @@
-﻿namespace BelajarNextJsBackEnd.Models
+﻿namespace BelajarNextJsBackEnd.Models.Province
 {
     public class ProvinceUpdateModel
     {
