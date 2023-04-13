@@ -61,8 +61,8 @@ namespace BelajarNextJsBackEnd.Controllers
                     Description = X.Description,
                     Price = X.Price,
                     Quantity = X.Quantity,
-                    BrandId=X.BrandId,
-                    BrandName = X.Brand.Name,
+                    BrandId = X.BrandId,
+                    BrandName = X.Brand.Name
                 }). FirstOrDefaultAsync();
                 
 

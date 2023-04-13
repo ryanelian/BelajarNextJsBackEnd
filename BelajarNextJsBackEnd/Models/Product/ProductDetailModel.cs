@@ -12,6 +12,7 @@
         public int Quantity { set; get; }
 
         public string BrandId { set; get; } = "";
+
         public string BrandName { get; set; } = "";
     }
 
