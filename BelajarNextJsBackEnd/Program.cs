@@ -2,6 +2,8 @@ using BelajarNextJsBackEnd.Entities;
 using BelajarNextJsBackEnd.Services;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using OpenIddict.Validation.AspNetCore;
+using static OpenIddict.Abstractions.OpenIddictConstants;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,14 @@ builder.Services.AddAuthentication()
         options.LoginPath = "/Auth/SignIn";
         options.LogoutPath = "/connect/logout";
     });
+
+builder.Services.AddAuthorization(options => {
+    options.AddPolicy("api", p =>
+    {
+        p.AddAuthenticationSchemes(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme);
+        p.RequireClaim(Claims.Private.Scope, "api");
+    });
+});
 
 builder.Services.AddDataProtection().PersistKeysToDbContext<ApplicationDbContext>();
 
