@@ -1,10 +1,9 @@
-﻿using BelajarNextJsBackEnd.Entities;
-using System;
-
-namespace BelajarNextJsBackEnd.Models
+﻿namespace BelajarNextJsBackEnd.Models
 {
-    public class ProductCreateModel
+    public class ProductDetailModel
     {
+        public string Id { get; set; } = "";
+
         public string Name { get; set; } = "";
 
         public string Description { get; set; } = "";
@@ -14,6 +13,8 @@ namespace BelajarNextJsBackEnd.Models
         public int Quantity { set; get; }
 
         public string BrandId { set; get; } = "";
+
+        public string BrandName { get; set; } = "";
 
     }
 }
