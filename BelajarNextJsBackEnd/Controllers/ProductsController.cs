@@ -78,7 +78,7 @@ namespace BelajarNextJsBackEnd.Controllers
 
         // PUT: api/Products/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}", Name = "UpdateProduct")]
+        [HttpPost("{id}", Name = "UpdateProduct")]
         public async Task<IActionResult> PutProduct(string id, ProductUpdateModel product)
         {
             var update = await _context.Products.Where(Q => Q.Id == id).FirstOrDefaultAsync();
